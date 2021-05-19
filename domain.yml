@@ -1,0 +1,141 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- basic_packages:
+    use_entities:
+    - concept
+- exit:
+    use_entities: true
+- review_class_one:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot:
+    use_entities: true
+- basic_r:
+    use_entities:
+    - lang
+- concepts_r:
+    use_entities:
+    - lang
+- basic_commands:
+    use_entities:
+    - concept
+- basic_console:
+    use_entities:
+    - concept
+- basic_functions:
+    use_entities:
+    - concept
+- bot_challenge:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- mood_great:
+    use_entities: true
+entities:
+- concept
+- lang
+- language
+- lan
+slots:
+  lang:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - r
+    - python
+  concept:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - comando
+    - consola
+    - funciones
+    - scripts
+    - objetos
+responses:
+  utter_greet:
+  - text: Hola todo bien! :smile:\n Que deseas hacer?
+  utter_exit:
+  - text: Chao!!
+  utter_basic_packages:
+  - text: |
+      Las paquetes(también llamados librerías) son conjuntos de funciones creados usualmente por terceros.
+       dentro de la comunidad para colaborar en un problema específico.
+       -Existen paquetes en prácticamente todas las áreas científicas.
+       -Eso si, la calidad es muy diversa, desde paquetes desarrollados por hobbystas
+       hasta paquetes desarrollados por compañias.
+       -Los paquetes se instalan mediante la función install_packages(<nombrePaquete>)
+       -El principal repositorio donde se publican es el [CRAN](https://cran.r-project.org/)
+  utter_basic_functions:
+  - text: |
+      Las funciones son pequeños programas del lenguaje que reciben un input del usuario,
+       ejecutan las instrucciones diseñadas por el programador y devuelven
+       el output deseado basado en los datos ingresados.
+  utter_basic_console:
+  - text: |
+      No, no es el Play Station.Aunque muchos se divierten ahí.La consola 
+       Es la interfaz entre el programador y el lenguaje que permite introducir los comandos para visualizar los resultados.
+  utter_basic_commands:
+  - text: Los comandos son las instrucciones que se le dan al lenguaje para que ejecute lo solicitado por el usuario
+  utter_concepts_r:
+  - text: |
+      Los conceptos o elementos básicos que debes conocer en R son:
+       -comandos
+       -consola
+       -Funciones
+       -Paquetes
+       -Scripts
+       -Objetos
+  utter_basicR:
+  - image: https://memegenerator.net/img/instances/66981493/welcome-to-r-statistics-i-will-be-your-guide.jpg
+    text: |
+      Claro, R es lo mejor...R es un suite que integra facilidades para:
+       -la manipulación de datos= Manejo y almacenaje de datos.
+       -Operaciones con datos= Cálculo de operaciones en vectores y matrices
+       -Análisis de datos= Inmensa colección de herramientas de análisis
+       -Facilidades gráficas= Poderoso motor de visualizaciones
+       -Lenguaje de Programación= Para el análisis de datos y mucho más...
+  utter_classOne:
+  - text: |
+      Que tema de la clase 1 querés revisar? Como recordatorio vimos:
+       -Que es el ambiente R?
+       -Conceptos básicos de R
+       -Paquetes en R
+       -El IDE de Rstudio
+       -R Studio Cloud
+  utter_bot:
+  - text: Soy un robot :)
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Here is something to cheer you up
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- utter_basic_packages
+- utter_classOne
+- utter_exit
+- utter_greet
+forms: {}
+e2e_actions: []

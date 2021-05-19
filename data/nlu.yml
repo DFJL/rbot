@@ -1,0 +1,144 @@
+version: "2.0"
+nlu:
+- intent: concepts_r
+  examples: |
+    - cuáles son los conceptos básicos en [R](lan)?
+    - cuáles son los elementos básicos en  [R](lang)?
+    - que conceptos debo conocer en [R](lang) como mínimo?
+    - Conceptos básicos de [R](lang) ?
+    - conceptos básicos
+    - ver conceptos mínimos
+    - conocer los conceptos básicos que debo saber
+    - cuales son los componentes basicos de [R](lang)
+- intent: basic_packages
+  examples: |
+    - para que sirven los [paquetes](concept) de [R](lang)?
+    - que es un [paquete](concept) ?
+    - y los [paquete](concept) que propósito tienen?
+    - en [R](lang), que son los [paquete](concept)
+    - aprender sobre [paquete](concept)
+    - [paquete](concept)
+    - ahora cuenteme sobre [paquete](concept)
+    - ok y que son los [paquete](concept) de [R](lan)
+    - excelente! y finalmente los [paquete](concept)?
+    - mmm bueno que son [paquetes]{"entity": "concept", "value": "paquete"}?
+- intent: basic_functions
+  examples: |
+    - que es una [función](concept) de [R](lan)?
+    - que es una [función](concept) ?
+    - que hacen las [funciones](concept)?
+    - cuál es el propósito de las [funciones](concept)
+    - quiero saber de [funciones](concept)
+    - conocer sobre las [funciones](concept)
+    - que hace una [función](concept)
+    - mmm y las [funciones](concept) que son?
+    - ok ok y una [función](concept) que es?
+- intent: basic_console
+  examples: |
+    - que es la [consola](concept) de [R](lang)?
+    - que es una [consola](concept) ?
+    - Para que sirve la [consola](concept)?
+    - La [consola](concept) en [R](lang) que es?
+    - y la [consola](concept) que es?
+    - y la [consola](concept) de [R](lang) que es?
+    - y la [consola](concept)?
+    - Cual es la función de la [consola](concept)?
+    - gracias...y la [consola](concept)?
+    - muchas gracias!!! y que es la [consola](concept)?
+- intent: basic_commands
+  examples: |
+    - que son [comandos](concept) en R?
+    - que es un [comando](concept) de R?
+    - que son [comandos](concept)?
+    - quiero saber sobre [comandos](concept)?
+    - Que se entiende por [comando](concept) en [R](lang)?
+- intent: basic_r
+  examples: |
+    - Que es [R](lang)?
+    - Que es el ambiente de [R](lang)?
+    - Cuáles son las funcionalidades de [R](lang)?
+    - quiero saber de [R](lang) básico
+    - repasar introducción a [R](lang)
+    - Puedes contarme sobre el ambiente de [R](lang)?
+- intent: greet
+  examples: |
+    - Hola
+    - Buenos dias
+    - Buenas
+    - Hola hola
+    - Buenas tardes
+    - Buenas noches
+    - que tal?
+    - como esta
+    - como te va
+    - que me dice?
+    - eso en todas?
+    - pura vida
+    - hola
+- intent: exit
+  examples: |
+    - adios
+    - chao
+    - nos vemos
+    - hasta luego
+    - estamos hablando
+    - muchas gracias, chao
+    - muchas gracias, adios
+    - muchas gracias, bye
+    - muchas gracias, hasta luego
+    - hasta la vista
+    - irme
+    - me voy
+    - salir
+    - pura vida gracias
+    - tuanis gracias
+    - bueno despues continuo
+- intent: affirm
+  examples: |
+    - si
+    - claro
+    - por supuesto
+    - exacto
+    - suena bien
+    - de hecho
+- intent: deny
+  examples: |
+    - no
+    - jamas
+    - nunca
+    - no lo creo
+    - no me gusta
+    - no realmente
+- intent: bot
+  examples: |
+    - eres un bot?
+    - eres un robot?
+    - eres humano?
+    - estoy hablando a un robot?
+    - estoy hablando a un humano?
+    - le estoy hablando a un robot, cierto?
+    - no le estoy hablando a un humano, cierto?
+- intent: review_class_one
+  examples: |
+    - quiero repasar la clase 1
+    - podemos repasar la clase 1
+    - tengo unas dudas de la clase 1
+    - necesito revisar los temas de la clase 1
+    - no me siento seguro de los temas de la clase 1
+    - requiero revisar la primera clase
+    - repasar la primera clase
+    - ver los temas de la primera clase
+    - quiero estudiar la clase 1 del lenguaje [R](lang)
+- synonym: comando
+  examples: |
+    - comandos
+- synonym: función
+  examples: |
+    - funciones
+    - funcion
+- synonym: paquete
+  examples: |
+    - paquetes
+    - librería
+    - libreria
+    - librerias

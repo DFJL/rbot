@@ -1,0 +1,90 @@
+# Create the stories.md structure
+
+version: "2.0"
+
+stories:
+    
+- story: exit
+  steps:
+  - intent: exit
+  - action: utter_exit
+
+- story: class1 basic R
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: review_class_one
+  - action: utter_classOne
+  - intent: basic_r
+  - action: utter_basicR
+    
+- story: class1 commands
+  steps:
+  - intent: concepts_r
+  - action: utter_concepts_r
+  - intent: basic_commands
+    entities:
+    - concept: comando
+  - slot_was_set:
+    - concept: comando
+  - action: utter_basic_commands
+    
+    
+- story: class1 console
+  steps:
+  - intent: concepts_r
+  - action: utter_concepts_r
+  - intent: basic_console
+    entities:
+    - concept: consola
+  - slot_was_set:
+    - concept: consola
+  - action: utter_basic_console
+
+- story: class1 functions
+  steps:
+  - intent: concepts_r
+  - action: utter_concepts_r
+  - intent: basic_functions
+    entities:
+    - concept: función
+  - slot_was_set:
+    - concept: función
+  - action: utter_basic_functions
+
+- story: class1 packages
+  steps:
+  - intent: concepts_r
+  - action: utter_concepts_r
+  - intent: basic_packages
+    entities:
+    - concept: paquete
+  - slot_was_set:
+    - concept: paquete
+  - action: utter_basic_packages
+    
+- story: robot
+  steps:
+  - intent: bot
+  - action: utter_bot
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: review_class_one
+    entities:
+    - lang: R
+  - slot_was_set:
+    - lang: R
+  - action: utter_classOne
+  - intent: basic_packages
+    entities:
+    - concept: paquete
+  - slot_was_set:
+    - concept: paquete
+  - action: utter_basic_packages
+  - intent: exit
+  - action: utter_exit
+
+
