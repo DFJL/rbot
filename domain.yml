@@ -23,6 +23,9 @@ intents:
 - basic_r:
     use_entities:
     - lang
+- basic_scripts:
+    use_entities:
+    - concept
 - concepts_r:
     use_entities:
     - lang
@@ -46,8 +49,6 @@ intents:
 entities:
 - concept
 - lang
-- language
-- lan
 slots:
   lang:
     type: rasa.shared.core.slots.CategoricalSlot
@@ -73,9 +74,17 @@ responses:
   - text: Hola todo bien! :smile:\n Que deseas hacer?
   utter_exit:
   - text: Chao!!
+
+  utter_basic_scripts:
+  - text: |
+      Los scripts son archivos de texto plano en los que el programador puede escribir secuencialmente la lógica de su análisis
+      o algoritmo, incluyendo comentarios para la apropiada documentación.Por ejemplo:
+      # Esto es un comentario.
+      En los scripts usualmente se utilizan funciones y se crean objetos con la finalidad de resolver algún problema.
+
   utter_basic_packages:
   - text: |
-      Las paquetes(también llamados librerías) son conjuntos de funciones creados usualmente por terceros.
+      Los paquetes(también llamados librerías) son conjuntos de funciones creados usualmente por terceros.
        dentro de la comunidad para colaborar en un problema específico.
        -Existen paquetes en prácticamente todas las áreas científicas.
        -Eso si, la calidad es muy diversa, desde paquetes desarrollados por hobbystas

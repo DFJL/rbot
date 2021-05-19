@@ -62,7 +62,19 @@ stories:
   - slot_was_set:
     - concept: paquete
   - action: utter_basic_packages
-    
+
+- story: class1 scripts
+  steps:
+  - intent: concepts_r
+  - action: utter_concepts_r
+  - intent: basic_scripts
+    entities:
+    - concept: scripts
+  - slot_was_set:
+    - concept: scripts
+  - action: utter_basic_scripts
+
+
 - story: robot
   steps:
   - intent: bot

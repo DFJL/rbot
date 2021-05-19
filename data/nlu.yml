@@ -10,10 +10,21 @@ nlu:
     - ver conceptos mínimos
     - conocer los conceptos básicos que debo saber
     - cuales son los componentes basicos de [R](lang)
+
+- intent: basic_scripts
+  examples: |
+    - que se pueden hacer con los [scripts](concept) de [R](lang)?
+    - [script](concept) que es eso ?
+    - que función tienen los [scripts](concept)?
+    - que aplicación tienen los [scripts](concept)?
+    - quiero saber más de  [scripts](concept) [R](lang)
+    - mostrar información sobre [scripts](concept) por favor
+    - por favor enseñarme información sobre [scripts](concept) en [R](lang)
+
 - intent: basic_packages
   examples: |
     - para que sirven los [paquetes](concept) de [R](lang)?
-    - que es un [paquete](concept) ?
+    - que es un [paquete](concept) 
     - y los [paquete](concept) que propósito tienen?
     - en [R](lang), que son los [paquete](concept)
     - aprender sobre [paquete](concept)
@@ -142,3 +153,8 @@ nlu:
     - librería
     - libreria
     - librerias
+
+- synonym: scripts
+  examples: |
+    - script
+
