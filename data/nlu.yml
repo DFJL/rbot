@@ -10,7 +10,8 @@ nlu:
     - ver conceptos mínimos
     - conocer los conceptos básicos que debo saber
     - cuales son los componentes basicos de [R](lang)
-
+    - gracias....bueno quiero saber sobre los conceptos basicos
+    - conceptos basicos
 - intent: basic_scripts
   examples: |
     - que se pueden hacer con los [scripts](concept) de [R](lang)?
@@ -20,11 +21,10 @@ nlu:
     - quiero saber más de  [scripts](concept) [R](lang)
     - mostrar información sobre [scripts](concept) por favor
     - por favor enseñarme información sobre [scripts](concept) en [R](lang)
-
 - intent: basic_packages
   examples: |
     - para que sirven los [paquetes](concept) de [R](lang)?
-    - que es un [paquete](concept) 
+    - que es un [paquete](concept)
     - y los [paquete](concept) que propósito tienen?
     - en [R](lang), que son los [paquete](concept)
     - aprender sobre [paquete](concept)
@@ -33,6 +33,8 @@ nlu:
     - ok y que son los [paquete](concept) de [R](lan)
     - excelente! y finalmente los [paquete](concept)?
     - mmm bueno que son [paquetes]{"entity": "concept", "value": "paquete"}?
+    - ok....despliegue info de [paquetes]{"entity": "concept", "value": "paquete"}
+    - [Paquetes]{"entity": "concept", "value": "paquete"} en [R](lang)
 - intent: basic_functions
   examples: |
     - que es una [función](concept) de [R](lan)?
@@ -44,6 +46,7 @@ nlu:
     - que hace una [función](concept)
     - mmm y las [funciones](concept) que son?
     - ok ok y una [función](concept) que es?
+    - y lsa [funciones]{"entity": "concept", "value": "funci\u00f3n"}?
 - intent: basic_console
   examples: |
     - que es la [consola](concept) de [R](lang)?
@@ -71,6 +74,15 @@ nlu:
     - quiero saber de [R](lang) básico
     - repasar introducción a [R](lang)
     - Puedes contarme sobre el ambiente de [R](lang)?
+    - quiero saber lo básico de [r](lang)
+    - mmm veamos...que es el ambiente de [r](lang)?
+    - en si que es [R](lang)?
+    - quiero saber sobre el ambiente de [r](lang)
+    - que es el ambiente de [r](lang)
+    - no no, que es lo básico de [R](lang)
+    - que es [R](lang) ?
+    - quiero aprender sobre [R](lang) basico
+    - Quiero saber de [R](lang) básico
 - intent: greet
   examples: |
     - Hola
@@ -86,6 +98,10 @@ nlu:
     - eso en todas?
     - pura vida
     - hola
+    - que me dice todas
+    - hola hola
+    - hola!
+    - en todas
 - intent: exit
   examples: |
     - adios
@@ -104,6 +120,8 @@ nlu:
     - pura vida gracias
     - tuanis gracias
     - bueno despues continuo
+    - excelenete gracias después continuo
+    - Gracias
 - intent: affirm
   examples: |
     - si
@@ -140,6 +158,14 @@ nlu:
     - repasar la primera clase
     - ver los temas de la primera clase
     - quiero estudiar la clase 1 del lenguaje [R](lang)
+    - super...bueno quiero empezar con la clase 1
+    - quiero por favor me meustre contenido de la clase 1
+- synonym: paquete
+  examples: |
+    - paquetes
+    - librería
+    - libreria
+    - librerias
 - synonym: comando
   examples: |
     - comandos
@@ -147,14 +173,6 @@ nlu:
   examples: |
     - funciones
     - funcion
-- synonym: paquete
-  examples: |
-    - paquetes
-    - librería
-    - libreria
-    - librerias
-
 - synonym: scripts
   examples: |
     - script
-

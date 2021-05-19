@@ -1,14 +1,9 @@
-# Create the stories.md structure
-
 version: "2.0"
-
 stories:
-    
 - story: exit
   steps:
   - intent: exit
   - action: utter_exit
-
 - story: class1 basic R
   steps:
   - intent: greet
@@ -17,7 +12,6 @@ stories:
   - action: utter_classOne
   - intent: basic_r
   - action: utter_basicR
-    
 - story: class1 commands
   steps:
   - intent: concepts_r
@@ -28,8 +22,6 @@ stories:
   - slot_was_set:
     - concept: comando
   - action: utter_basic_commands
-    
-    
 - story: class1 console
   steps:
   - intent: concepts_r
@@ -40,7 +32,6 @@ stories:
   - slot_was_set:
     - concept: consola
   - action: utter_basic_console
-
 - story: class1 functions
   steps:
   - intent: concepts_r
@@ -51,7 +42,6 @@ stories:
   - slot_was_set:
     - concept: función
   - action: utter_basic_functions
-
 - story: class1 packages
   steps:
   - intent: concepts_r
@@ -62,7 +52,6 @@ stories:
   - slot_was_set:
     - concept: paquete
   - action: utter_basic_packages
-
 - story: class1 scripts
   steps:
   - intent: concepts_r
@@ -73,13 +62,10 @@ stories:
   - slot_was_set:
     - concept: scripts
   - action: utter_basic_scripts
-
-
 - story: robot
   steps:
   - intent: bot
   - action: utter_bot
-
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -98,5 +84,21 @@ stories:
   - action: utter_basic_packages
   - intent: exit
   - action: utter_exit
-
-
+- story: Story from Conversation ID e67549ead7124ec4b0c42a0be1dcca01
+  steps:
+  - slot_was_set:
+    - lang: r
+  - action: utter_basicR
+  - intent: concepts_r
+  - action: utter_concepts_r
+  - intent: basic_packages
+    entities:
+    - concept: paquete
+  - slot_was_set:
+    - concept: paquete
+  - action: utter_basic_packages
+  - intent: exit
+  - action: utter_exit
+  - intent: stop
+  - slot_was_set:
+    - concept: paquete
